@@ -1,5 +1,6 @@
 class Palindrome
   def self.palindrome?(string)
+    string = string.to_s unless string.is_a?(String)
     string.downcase!
     string.gsub!(/\W/, '')
     if string.length < 2
